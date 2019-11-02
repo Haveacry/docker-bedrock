@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-ENV BEDROCK_VERSION=1.12.1.1
+ENV BEDROCK_VERSION=1.13.0.34
 
 LABEL maintainer="Dean Holland <speedster@haveacry.com>"
 LABEL bedrock_version=$BEDROCK_VERSION
