@@ -14,12 +14,12 @@ jobs:
         with:
           username: ${{ secrets.REPO_USER }}
           password: ${{ secrets.REPO_PASS }}
-          repository: registry.haveacry.com/speedster/bedrock-test
+          repository: registry.haveacry.com/speedster/bedrock
           tag_with_ref: true
       - name: Push to Docker Hub
         uses: docker/build-push-action@v1
         with:
           username: ${{ secrets.REPO_USER }}
           password: ${{ secrets.REPO_PASS }}
-          repository: registry.haveacry.com/speedster/bedrock-test
+          repository: registry.haveacry.com/speedster/bedrock
           tags: latest
