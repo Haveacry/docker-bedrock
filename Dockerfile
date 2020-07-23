@@ -1,9 +1,16 @@
 FROM ubuntu:latest
 
+ARG BUILD_DATE
+ARG VCS_REF
+
 ENV BEDROCK_VERSION=1.16.1.02
 
-LABEL maintainer="Dean Holland <speedster@haveacry.com>"
-LABEL bedrock_version=$BEDROCK_VERSION
+LABEL maintainer="Dean Holland <speedster@haveacry.com>" \
+      bedrock_version=$BEDROCK_VERSION \
+      org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.vcs-url="https://github.com/Haveacry/docker-bedrock" \
+      org.label-schema.build-date=$BUILD_DATA \
+      org.label-schema.version=$BEDROCK_VERSION
 
 RUN apt-get update
 RUN apt-get install -y unzip curl libcurl4 libssl1.1
