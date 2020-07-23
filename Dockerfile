@@ -9,7 +9,7 @@ LABEL maintainer="Dean Holland <speedster@haveacry.com>" \
       bedrock_version=$BEDROCK_VERSION \
       org.label-schema.vcs-ref=$VCS_REF \
       org.label-schema.vcs-url="https://github.com/Haveacry/docker-bedrock" \
-      org.label-schema.build-date=$BUILD_DATA \
+      org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.version=$BEDROCK_VERSION
 
 RUN apt-get update
