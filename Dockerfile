@@ -17,6 +17,7 @@ RUN apt-get install -y unzip curl libcurl4 libssl1.1
 RUN curl https://minecraft.azureedge.net/bin-linux/bedrock-server-$BEDROCK_VERSION.zip --output bedrock-server.zip
 RUN unzip bedrock-server.zip -d bedrock-server
 RUN rm bedrock-server.zip
+RUN chmod +x /bedrock-server/bedrock_server
 
 WORKDIR /bedrock-server
 ENV LD_LIBRARY_PATH=.
