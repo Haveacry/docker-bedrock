@@ -25,7 +25,7 @@ jobs:
           echo "::set-output name=localver::$CUR_VER"
     outputs:
       bedrockver: ${{ steps.bedrockversion.outputs.bedrockver }}
-      localver: ${{ steps.localdocker.outputs.localver }}
+      localver: ${{ steps.localversion.outputs.localver }}
 
   update_docker:
     runs-on: ubuntu-latest
