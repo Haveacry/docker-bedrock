@@ -43,7 +43,7 @@ jobs:
         run: |
           sed -i -E "s/BEDROCK_VERSION=[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+/BEDROCK_VERSION=${{ needs.check_version.outputs.bedrockver }}/g" Dockerfile
       - name: Commit and tag
-        uses: EndBug/add-and-commit@v4
+        uses: EndBug/add-and-commit@v7
         with:
           message: "Release ${{ needs.check_version.outputs.bedrockver }}"
           add: "Dockerfile"
