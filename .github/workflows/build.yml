@@ -18,4 +18,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: speedst3r/bedrock-server:${GITHUB_REF##*/},speedst3r/bedrock-server:latest
+          tags: speedst3r/bedrock-server:${{ github.event.release.tag_name }},speedst3r/bedrock-server:latest
