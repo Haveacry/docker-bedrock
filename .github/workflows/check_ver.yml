@@ -16,7 +16,7 @@ jobs:
       - name: Check Bedrock Server release
         id: bedrockversion
         run: |
-          NEW_VER=`curl -L https://www.minecraft.net/en-us/download/server/bedrock/ 2>&1 | grep bin-linux | awk -F- '{print $4}' | awk -F\.zip '{print $1}'`
+          NEW_VER=`curl -L -A "Mozilla/5.0 (Linux; Android 11; SM-T865) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.120 Safari/537.36" https://www.minecraft.net/en-us/download/server/bedrock/ 2>&1 | grep bin-linux | awk -F- '{print $4}' | awk -F\.zip '{print $1}'`
           echo "::set-output name=bedrockver::$NEW_VER"
       - name: Check local repo release
         id: localversion
