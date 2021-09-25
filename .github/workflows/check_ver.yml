@@ -30,7 +30,7 @@ jobs:
   update_docker:
     runs-on: ubuntu-latest
     needs: check_version
-    if: ${{ needs.check_version.outputs.bedrockver != needs.check_version.outputs.localver }}
+    if: ${{ needs.check_version.outputs.bedrockver != needs.check_version.outputs.localver && needs.check_version.outputs.bedrockver != "" }}
     steps:
       - name: Check out code
         uses: actions/checkout@v2
