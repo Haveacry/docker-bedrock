@@ -3,7 +3,7 @@ FROM ubuntu:latest
 ARG BUILD_DATE
 ARG VCS_REF
 
-ENV BEDROCK_VERSION=1.18.2.03
+ENV BEDROCK_VERSION=1.18.11.01
 
 LABEL maintainer="Dean Holland <speedster@haveacry.com>" \
       bedrock_version=$BEDROCK_VERSION \
