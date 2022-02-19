@@ -18,7 +18,7 @@ This Docker image will download the Bedrock Server app and set it up, along with
         -v "bedrock-worlds:/bedrock-server/worlds"\
         -p 19132:19132/udp\
         --restart=unless-stopped\
-        roemer/bedrock-server
+        ghcr.io/haveacry/bedrock-server
     ```
 3. Prepare the config files
     1. Either start the server once and stop it
