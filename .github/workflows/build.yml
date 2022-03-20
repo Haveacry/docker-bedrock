@@ -34,5 +34,5 @@ jobs:
        with:
          context: .
          push: true
-         tags: ${{ steps.meta.outputs.tags }}, haveacry/bedrock-server:latest
+         tags: ${{ steps.meta.outputs.tags }}
          labels: ${{ steps.meta.outputs.labels }}
