@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:bionic
 
 ARG BUILD_DATE
 ARG VCS_REF
