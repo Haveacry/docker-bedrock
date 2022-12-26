@@ -9,7 +9,7 @@ jobs:
   check_version:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           ref: master
           fetch-depth: 0
@@ -33,7 +33,7 @@ jobs:
     if: ${{ needs.check_version.outputs.bedrockver != needs.check_version.outputs.localver && needs.check_version.outputs.bedrockver != '' }}
     steps:
       - name: Check out code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: master
           fetch-depth: 0
