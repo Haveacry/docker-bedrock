@@ -22,7 +22,7 @@ jobs:
         id: localversion
         run: |
           CUR_VER="$(git tag --sort v:refname | tail -n 1)"
-          echo "::set-output name=localver::$CUR_VER"
+          echo "localver=$CUR_VER" >> $GITHUB_OUTPUT
     outputs:
       bedrockver: ${{ steps.bedrockversion.outputs.bedrockver }}
       localver: ${{ steps.localversion.outputs.localver }}
