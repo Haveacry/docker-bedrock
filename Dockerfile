@@ -3,7 +3,7 @@ FROM ubuntu:bionic
 ARG BUILD_DATE
 ARG VCS_REF
 
-ENV BEDROCK_VERSION=1.19.70.02
+ENV BEDROCK_VERSION=1.19.71.02
 
 LABEL maintainer="Dean Holland <speedster@haveacry.com>" \
       bedrock_version=$BEDROCK_VERSION \
