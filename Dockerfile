@@ -14,11 +14,9 @@ LABEL maintainer="Dean Holland <speedster@haveacry.com>" \
 
 RUN apt-get update && \
     apt-get install -y unzip curl libcurl4 && \
-    curl http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4_amd64.deb --output libssl1.1.deb && \
-    dpkg -i libssl1.1.deb && \
     curl https://minecraft.azureedge.net/bin-linux/bedrock-server-$BEDROCK_VERSION.zip --output bedrock-server.zip && \
     unzip bedrock-server.zip -d bedrock-server && \
-    rm bedrock-server.zip libssl1.1.deb && \
+    rm bedrock-server.zip && \
     chmod +x /bedrock-server/bedrock_server
 
 WORKDIR /bedrock-server
