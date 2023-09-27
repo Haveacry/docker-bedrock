@@ -12,12 +12,14 @@ LABEL maintainer="Dean Holland <speedster@haveacry.com>" \
       org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.version=$BEDROCK_VERSION
 
-RUN apt-get update
-RUN apt-get install -y unzip curl libcurl4 libssl1.1
-RUN curl https://minecraft.azureedge.net/bin-linux/bedrock-server-$BEDROCK_VERSION.zip --output bedrock-server.zip
-RUN unzip bedrock-server.zip -d bedrock-server
-RUN rm bedrock-server.zip
-RUN chmod +x /bedrock-server/bedrock_server
+RUN apt-get update && \
+    apt-get install -y unzip curl libcurl4 && \
+    curl http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4_amd64.deb --output libssl1.1.deb && \
+    dpkg -i libssl1.1.deb && \
+    curl https://minecraft.azureedge.net/bin-linux/bedrock-server-$BEDROCK_VERSION.zip --output bedrock-server.zip && \
+    unzip bedrock-server.zip -d bedrock-server && \
+    rm bedrock-server.zip libssl1.1.deb && \
+    chmod +x /bedrock-server/bedrock_server
 
 WORKDIR /bedrock-server
 ENV LD_LIBRARY_PATH=.
