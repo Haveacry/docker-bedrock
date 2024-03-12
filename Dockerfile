@@ -3,7 +3,7 @@ FROM ubuntu:jammy
 ARG BUILD_DATE
 ARG VCS_REF
 
-ENV BEDROCK_VERSION=1.20.62.03
+ENV BEDROCK_VERSION=1.20.70.05
 
 LABEL maintainer="Dean Holland <speedster@haveacry.com>" \
       bedrock_version=$BEDROCK_VERSION \
