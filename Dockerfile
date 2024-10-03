@@ -14,7 +14,7 @@ LABEL maintainer="Dean Holland <speedster@haveacry.com>" \
 
 RUN apt-get update && \
     apt-get install -y unzip curl libcurl4 && \
-    curl https://minecraft.azureedge.net/bin-linux/bedrock-server-$BEDROCK_VERSION.zip --output bedrock-server.zip && \
+    curl -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Edg/129.0.2792.65" https://minecraft.azureedge.net/bin-linux/bedrock-server-$BEDROCK_VERSION.zip --output bedrock-server.zip && \
     unzip bedrock-server.zip -d bedrock-server && \
     rm bedrock-server.zip && \
     chmod +x /bedrock-server/bedrock_server
