@@ -17,7 +17,7 @@ jobs:
         id: bedrockversion
         run: |
           NEW_VER=`curl -s -L -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0" https://net-secondary.web.minecraft-services.net/api/v1.0/download/links |  jq -r '.result.links[] | select (.downloadType == "serverBedrockLinux") | .downloadUrl' | awk -F- '{print $4}' | awk -F\.zip '{print $1}'`
-          if [ -z "$NEW_VER" ]; exit 1 ; fi
+          if [ -z "$NEW_VER" ]; then exit 1 ; fi
           echo "bedrockver=$NEW_VER" >> $GITHUB_OUTPUT
       - name: Check local repo release
         id: localversion
