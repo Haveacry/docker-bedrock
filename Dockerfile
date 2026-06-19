@@ -3,7 +3,7 @@ FROM ubuntu:noble
 ARG BUILD_DATE
 ARG VCS_REF
 
-ENV BEDROCK_VERSION=1.26.30.5
+ENV BEDROCK_VERSION=1.26.31.1
 
 LABEL maintainer="Dean Holland <speedster@haveacry.com>" \
       bedrock_version=$BEDROCK_VERSION \
